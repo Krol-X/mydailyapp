@@ -6,9 +6,8 @@ export type Maybe<T> = T | null;
 
 export type Identifiable = { id: number };
 
-export interface TaskObject extends Identifiable {
-  id: number;
+export interface Message {
+  id?: number;
   text: string;
-  result: Maybe<string>;
-  elapsed: Maybe<number>;
+  created_at: Date;
 }

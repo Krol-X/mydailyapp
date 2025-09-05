@@ -5,11 +5,12 @@
 
   interface Props {
     target?: AppRoute;
-    icon?: string,
+    icon?: string;
+    style?: string;
     onclick?: OnClick;
   }
 
-  let {target, icon, onclick = undefined}: Props = $props();
+  let {target, icon, onclick = undefined, style}: Props = $props();
 
   let targetRoute = target ? routes[target] : null;
 
@@ -17,9 +18,6 @@
   let click: OnClick = onclick ?? (() => !!target && page.goto(target!))
 </script>
 
-<button onclick={click}>
+<button onclick={click} {style}>
   {@html Icon}
 </button>
-
-<style>
-</style>

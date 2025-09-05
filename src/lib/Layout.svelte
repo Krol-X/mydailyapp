@@ -21,6 +21,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
+    gap: 0.5rem;
   }
 
   header, footer {
@@ -34,6 +35,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    overflow-y: hidden;
   }
 </style>

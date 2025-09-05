@@ -45,13 +45,14 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: auto;
+  padding: 0.5rem 0.75rem;
 }
 
 button {
   border-radius: 12px;
   border: 1px solid transparent;
   padding: 0.6em 0.6em;
-  font-size: 1em;
+  font-size: 14px;
   font-weight: 500;
   font-family: inherit;
   color: var(--tx-color);
@@ -62,4 +63,15 @@ button {
 button:focus,
 button:focus-visible {
   outline: none;
+}
+
+textarea {
+  font-size: 1em;
+  font-weight: 400;
+  font-family: inherit;
+}
+
+svg {
+  width: 1.8em;
+  height: 1.8em;
 }
