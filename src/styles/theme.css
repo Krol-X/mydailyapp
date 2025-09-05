@@ -1,0 +1,15 @@
+:root {
+  --tx-color: #000000;
+  --bg-color: #F2F2FA;
+  --bg-active: #FCFCFC;
+  --bg-inactive: #CDF7F6;
+  --bg-border: rgba(0, 0, 0, .5);
+}
+
+[data-theme="dark"] {
+  --tx-color: #ffffff;
+  --bg-color: #0C0C0C;
+  --bg-active: #45454A;
+  --bg-inactive: #262628;
+  --bg-border: rgba(255, 255, 255, .5);
+}
