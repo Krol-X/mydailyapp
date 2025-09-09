@@ -1,8 +1,8 @@
 import {BaseStore} from "./base-store.svelte";
 import type {Identifiable, Maybe} from "../index";
 
-export class IdStore<T extends Identifiable> extends BaseStore<T> {
-  find(id: number): Maybe<T> {
+export class IdStore<T extends Identifiable<any>> extends BaseStore<T> {
+  find(id: any): Maybe<T> {
     return this._collection.find(item => item.id === id) ?? null;
   }
 
@@ -10,12 +10,12 @@ export class IdStore<T extends Identifiable> extends BaseStore<T> {
     this._collection = [...this._collection, item];
   }
 
-  change(id: number, changes: Partial<T>): void {
+  change(id: any, changes: Partial<T>): void {
     const item = this.find(id);
     if (item) Object.assign(item, changes);
   }
 
-  remove(id: number): void {
+  remove(id: any): void {
     this._collection = this._collection.filter(item => item.id !== id);
   }
 }

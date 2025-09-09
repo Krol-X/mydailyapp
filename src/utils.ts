@@ -7,3 +7,5 @@ export const formatDate = (dateString: string): string => {
     minute: '2-digit',
   });
 };
+
+export const RandomID = () => Math.random().toString(16).slice(2)

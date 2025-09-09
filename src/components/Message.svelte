@@ -1,10 +1,9 @@
 <script lang="ts">
-
-  import type {Message} from "../types";
   import {formatDate} from "../utils";
+  import type {Story} from "../stores/stories.svelte";
 
   interface Props {
-    data: Message;
+    data: Story;
   }
 
   let {data} = $props();
@@ -28,6 +27,7 @@
     text-align: right;
     margin-bottom: 4px;
   }
+
   .text {
     width: 100%;
     font-weight: 300;
